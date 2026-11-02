@@ -1,0 +1,33 @@
+{
+  "name": "stock-alert-bot",
+  "version": "1.0.0",
+  "description": "Personal daily support/resistance alerts through Telegram on Cloudflare Workers Free",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write src test scripts README.md package.json tsconfig.json wrangler.jsonc",
+    "format:check": "prettier --check src test scripts README.md package.json tsconfig.json wrangler.jsonc",
+    "dev": "wrangler dev --test-scheduled",
+    "build": "wrangler deploy --dry-run --outdir dist",
+    "db:local": "wrangler d1 migrations apply stock-alert-bot --local",
+    "db:remote": "wrangler d1 migrations apply stock-alert-bot --remote",
+    "deploy": "wrangler deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261012.1",
+    "@types/node": "^26.6.5",
+    "miniflare": "^5.20261006.1-alpha",
+    "prettier": "^3.9.10",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.4",
+    "wrangler": "^4.149.0"
+  }
+}

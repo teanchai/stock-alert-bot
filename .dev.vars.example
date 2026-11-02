@@ -1,0 +1,6 @@
+ALPACA_KEY=your-paper-account-key
+ALPACA_SECRET=your-paper-account-secret
+TELEGRAM_TOKEN=your-bot-token
+TELEGRAM_WEBHOOK_SECRET=generate-a-long-random-secret
+OWNER_USER_ID=your-telegram-numeric-user-id
+OWNER_CHAT_ID=your-private-chat-id
